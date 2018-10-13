@@ -14,7 +14,10 @@ namespace CompGeoVis {
         double getX(){return x;}
         double getY(){return y;}
         Point(double x, double y);
-        CompGeoVis::Point& operator=(const CompGeoVis::Point& rhs);
+        Point& operator=(const Point& rhs);
+        Point operator+(const Point& rhs);
+        Point& operator+=(const Point& rhs);
+        bool operator==(const Point& rhs);
         void Print();
         virtual ~Point(){}
     };

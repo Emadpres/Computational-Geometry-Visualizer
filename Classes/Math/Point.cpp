@@ -19,6 +19,25 @@ Point& Point::operator=(const Point& rhs) {
     return *this;
 }
 
+Point Point::operator+(const Point& rhs)
+{
+    Point res(this->x+rhs.x, this->y+rhs.y);
+    return res;
+}
+
+Point& Point::operator+=(const Point& rhs)
+{
+    this->x += rhs.x;
+    this->y += rhs.y;
+    return *this;
+}
+
+bool Point::operator==(const Point& rhs)
+{
+    return (x==rhs.x&&y==rhs.y);
+}
+
+
 void Point::Print() {
     std::cout<<"Point: "<<x<<","<<y<<std::endl;
 }
