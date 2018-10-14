@@ -32,13 +32,13 @@ Point& Point::operator+=(const Point& rhs)
     return *this;
 }
 
-bool Point::operator==(const Point& rhs)
+bool Point::operator==(const Point& rhs) const
 {
     return (x==rhs.x&&y==rhs.y);
 }
 
 
-void Point::Print() {
+void Point::Print() const {
     std::cout<<"Point: "<<x<<","<<y<<std::endl;
 }
 

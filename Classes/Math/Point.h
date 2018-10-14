@@ -17,8 +17,8 @@ namespace CompGeoVis {
         Point& operator=(const Point& rhs);
         Point operator+(const Point& rhs);
         Point& operator+=(const Point& rhs);
-        bool operator==(const Point& rhs);
-        void Print();
+        bool operator==(const Point& rhs) const;
+        void Print() const;
         virtual ~Point(){}
     };
 }
